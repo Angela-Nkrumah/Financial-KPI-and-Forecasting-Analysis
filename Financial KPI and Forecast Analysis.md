@@ -150,7 +150,7 @@ This visualization shows the expected number of orders per month over the foreca
 
 - In-Store and Online revenue forecast(Next 12 months).
 
-This dual-line chart compares forecasted revenue from in‑store and online sales channels over the next year. By separating the two channels on a shared time axis, the chart highlights differences in performance trends, seasonality, and relative contribution to total revenue. It supports channel-level strategy and resource allocation decisions.
+This dual-line chart compares forecast revenue from in‑store and online sales channels over the next year. By separating the two channels on a shared time axis, the chart highlights differences in performance trends, seasonality, and relative contribution to total revenue. It supports channel-level strategy and resource allocation decisions.
 
 - Overall forecast return rate (Next 12 months).
 
@@ -164,7 +164,7 @@ The combined forecasting and KPI analysis indicates that while projected revenue
 
 - Plan cash using the lower revenue scenario, not the average forecast.
     
-    The forecast shows that revenue uncertainty is widening over time. To avoid liquidity pressure, cash planning should be anchored to the lower bound rather than the point forecast. This ensures the business can still meet landlord payments, refunds, and operating costs even if demand underperforms expectations. Also, the presence of wide forecast bounds should trigger scenario planning rather than be hidden or ignored. Management should use the forecast range to stress-test staffing, inventory, and cash commitments under both optimistic and downside scenarios.
+    The forecast shows that revenue uncertainty is widening over time. To avoid liquidity pressure, cash planning should be anchored to the lower bound rather than the point forecast. This ensures the business can still meet landlord payments, refunds, and operating costs even if demand under performs expectations. Also, the presence of wide forecast bounds should trigger scenario planning rather than be hidden or ignored. Management should use the forecast range to stress-test staffing, inventory, and cash commitments under both optimistic and downside scenarios.
     
 - Actively reduce return rates before scaling revenue expectations.
     
@@ -176,7 +176,7 @@ Marketing spend, promotions, and inventory allocation should increasingly favor 
 
 - Do not rely on order volume growth alone to drive performance.
 
-Forecasted order volumes fluctuate and do not show strong, sustained growth. This suggests that pushing for more orders without improving order quality may increase operational load without improving profitability. Focus should instead be placed on improving conversion quality and reducing post-purchase losses.
+Forecast order volumes fluctuate and do not show strong, sustained growth. This suggests that pushing for more orders without improving order quality may increase operational load without improving profitability. Focus should instead be placed on improving conversion quality and reducing post-purchase losses.
 
 # Conclusion
 
