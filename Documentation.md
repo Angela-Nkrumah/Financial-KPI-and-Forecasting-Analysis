@@ -139,6 +139,8 @@ The KPI analysis reveals that revenue performance is healthy with a total revenu
 
 This dashboard presents a forward-looking view of key business performance indicators using Seasonal Autoregressive Integrated Moving Average (SARIMA) due to the trends and repeating seasonal patterns in the dataset. Each visualization is designed to support planning, monitoring, and decision-making over a 12‑month horizon.
 
+<img width="1919" height="1199" alt="Dashboard 1(1)" src="https://github.com/user-attachments/assets/68c77ed6-c677-4f93-92b2-c75430ce5994" />
+
 # Charts
 
 - Revenue Forecast(12 months outlook with SARIMA uncertainty).
