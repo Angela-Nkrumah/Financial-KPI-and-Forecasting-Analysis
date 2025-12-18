@@ -1,0 +1,177 @@
+Executive Summary
+
+This project seeks to solve a common challenge most business struggle with, which is having a unified, forward-looking view of their financial performance. I developed a financial KPI Dashboard that brings together revenue, profit, order value, and returns into one clear interface for an e-commerce business. Beyond reporting the past, it integrates forecasting to anticipate future revenue and risks. This enables executives to act faster, optimize strategy, and strengthen financial decision-making
+
+Business Objective
+
+The e-commerce business faces challenges when it comes to financial reporting which often affects the efficacy in the decision making of the business. With financial data often scattered across multiple systems and reports, visibility across key performance areas were often overlooked by executives. Another limitation is the focus on historical reporting without forward-looking analysis. This lack of forecasting made it difficult for the business to plan effectively by allocating funds or anticipating risks.
+
+The objective of this project was to address these issues by designing a single dashboard for KPI tracking as well as another for forecasting analysis so as to :
+
+- Enable quick decision-making with KPI cards that give executives instant access to core financial metrics.
+- Track operational efficiency by surfacing categories with high return rates and monitoring hidden costs such as discounts and shipping.
+- Introduce forecasting capabilities to move from descriptive to predictive analytics, supporting more proactive planning.
+- Support strategic growth by giving leadership the tools to identify trends early and respond with data-driven strategies.
+
+Data Overview
+
+This project uses a sales dataset of an e-commerce business that captures a wide range of financial and operational details from customer transactions.
+
+Key Columns In Dataset
+
+- Invoice No – A unique identifier for each sales transaction.
+- Stock Code – The SKU or product code for tracking inventory.
+- Description – A brief name/description of the product sold.
+- Quantity – The number of units sold in a given transaction.
+- Invoice Date – The date and time the transaction occurred (used for time-series analysis and forecasting).
+- Unit Price – The selling price per unit of the product.
+- Customer ID – A unique identifier for each customer.
+- Country – The customer’s location, useful for regional analysis.
+- Discount – Any promotional discount applied to the order.
+- Payment Method – How the customer paid (e.g., PayPal, Bank Transfer).
+- Shipping Cost – The cost of delivering the order.
+- Category – The product’s classification (e.g., Electronics, Apparel).
+- Sales Channel – Whether the purchase was made online or in-store.
+- Return Status – Whether the product was returned.
+- Shipment Provider – The logistics partner responsible for delivery.
+- Warehouse Location – The warehouse from which the order was shipped.
+- Order Priority – The urgency of the order (High, Medium, Low).
+
+Data Cleaning and Preparation
+
+To ensure accuracy and consistency, the dataset was cleaned before analysis by
+
+- Handling of missing values: missing values in columns such as Customer ID, were handled by replacing the them with ‘’Unknown’’.
+- Standardization: Column headers were standardized to improve readability. Return transactions which were mislabelled as ‘’Not Returned’’ were standardized affecting columns such as Quantity, Unit Price and Return Status. The issue identified was, negative values were present in both quantity and unit price. These negatives appeared in rows with both returned and not returned statuses. This created inconsistency because normally, negative quantity = items returned. Negative unit price = refund/credit and lastly, return status = not returned should not have negatives,  A decision rule of   was established to address this issue.
+
+       If Quantity < 0 or Unit Price < 0 then treat the transaction as Returned.
+
+      If Quantity >= 0 and Unit Price >= 0 then keep original Return Status.
+
+    **** Implementation : 
+
+      =IF(OR(Quantity <0, Unit Price <0), "Returned", Original Return Status)
+
+- Converted data types such as dates into proper formats for time-series forecasting.
+- Removed inconsistencies such as extra spaces or irregular formatting in product descriptions.
+
+Dashboard 
+
+Two main dashboards were designed with with a business-first perspective ensuring that each visual, not only told a story from a business point of view, but also to answer a key operational or financial question.
+
+Financial KPI Dashboard
+
+At a glance, the top section of the dashboard has five (5) cards visualizing the KPIs of the business and one (1) supporting chart which provides context into the revenue trend of the dataset, allowing decision-makers to move from high-level KPIs to deeper trend and category insights.
+Key Performance Indicator’s
+
+- Total Revenue
+    
+    Measures the total income from all transactions. Helps assess top-line growth and sales momentum in the business and a sparkline visualizing the revenue points of each month-year.
+    
+- Total Orders
+    
+    Number of transactions the business has received so far as well as a sparkline of the total revenue by each month-year. This provides insights into customer purchasing frequency.
+    
+- Average Order Value (AOV)
+    
+    Calculated as Total Revenue /Total Orders (COUNTD Invoice-No).  Higher AOV means customers are spending more per transaction. As well a sparkline of the average order value by month-year of the dataset.
+    
+- Return Rate
+    
+    Percentage of orders returned, based on the ‘’Return Status’’ column which indicates high return rates which signal issues with product quality, mismatched customer expectations, or logistics problems.
+    
+- Total Customers
+    
+    The count of customers over a given period and a sparkline of the average customer count of each month-year. Provides insights into customer activity.
+    
+    Supporting Charts
+    
+- Revenue Over Time (Line Chart)
+    
+    A line chart that displays revenue trends by year and month of both in-store purchase and online purchase aiding the businesses identify seasonality, growth patterns, and revenue dips that may need corrective actions.
+    
+
+Business Insights of Dashboard
+
+The KPI analysis reveals that revenue performance is healthy with a total revenue of $ 60,128,85.82, but uneven across time. Average Order Value (AOV) shows consistent sales activity but remains relatively modest, indicating untapped potential in maximizing order size. The return rate of 4.7%, though not alarmingly high overall, highlights specific categories with above-average levels, which directly impact profitability and signal potential issues in product quality, customer expectations, or logistics. Supporting visual reinforce these findings with the revenue trend emphasizes seasonality and growth potential including; noticeable peaks specifically during; January 2021, January 2022, October 2022, March 2025 for both in-store and online. Although there has been some dips during the period of February  2022, September 2022, April 2023, February 2024, February 2025, June 2025 and the highest decline being in September 2025(which is understanding, since, the month and year of September 2025 just begun).Together, these insights underline both strengths in demand and weaknesses in efficiency.
+
+Recommendations
+
+- Boost Average Order Value (AOV):
+    
+    Introduce product bundling and cross-selling strategies.
+    
+    Offer tiered discounts or free shipping thresholds to encourage larger baskets.
+    
+    Use personalized recommendations in online channels to drive upsell.
+    
+- Reduce High Return Rates in Key Categories:
+    
+    Strengthen product quality checks before shipping.
+    
+    Improve product descriptions and images to better manage customer expectations.
+    
+    Enhance customer support and return policies to minimize unnecessary returns.
+    
+- Stabilize Revenue Seasonality:
+    
+    Targeted marketing and promotional campaigns should be launched ahead of peak demand months ((ei)January, October, March).
+    
+    Develop loyalty programs or subscription models to retain customers during off-peak months.
+    
+    Use forecasting insights to optimize inventory and staffing in high-demand periods.
+    
+- Improve Operational Efficiency:
+    
+    Align logistics and supply chain with peak and off-peak demand cycles.
+    
+    Continuously review pricing strategies to protect margins from returns and discounts.
+    
+
+KPI Forecast Dashboard
+
+This dashboard presents a forward-looking view of key business performance indicators using Seasonal Autoregressive Integrated Moving Average (SARIMA) due to the trends and repeating seasonal patterns in the dataset. Each visualization is designed to support planning, monitoring, and decision-making over a 12‑month horizon.
+
+Charts
+
+- Revenue Forecast(12 months outlook with SARIMA uncertainty)
+
+This chart displays the projected monthly revenue for the next 12 months using a SARIMA-based time series model. The solid line represents the point forecast, while the upper and lower dashed lines indicate the forecast uncertainty bounds. These bounds reflect potential variability in future revenue due to historical volatility and model uncertainty, providing a realistic range rather than a single deterministic outcome.
+
+- Order Volume Forecast(Expected monthly demand)
+
+This visualization shows the expected number of orders per month over the forecast period. It presents a point forecast only, without confidence intervals, to emphasize the central expectation of demand. The chart helps stakeholders anticipate operational load, inventory needs, and capacity planning based on projected order activity
+
+- In-Store and Online revenue forecast(Next 12 months)
+
+This dual-line chart compares forecasted revenue from in‑store and online sales channels over the next year. By separating the two channels on a shared time axis, the chart highlights differences in performance trends, seasonality, and relative contribution to total revenue. It supports channel-level strategy and resource allocation decisions.
+
+- Overall forecast return rate (Next 12 months)
+
+This chart illustrates the projected return rate over time, showing how product returns are expected to evolve in the coming months. A historical average return rate is included as a reference line to provide context for evaluating whether forecasted return levels are above or below normal performance. This transforms the chart from a simple trend view into a decision-support tool for risk management and operational planning.
+
+Business Insight of Dashboard
+
+The combined forecasting and KPI analysis indicates that while projected revenue remains positive across the forecast horizon, the widening gap between upper and lower revenue bounds highlights increasing uncertainty driven by volatility in order volume and return behavior rather than price effects. Forecasted order volume shows uneven growth, suggesting demand is not consistently scaling month-over-month, which introduces pressure on cash predictability despite stable average order values. At the same time, the return rate forecast trends above historical averages in several future periods, implying that a growing share of gross revenue may not convert into net realizable cash, particularly if return management processes remain unchanged. Channel-level forecasts further reveal that online revenue is expected to outperform in-store revenue in both level and growth consistency, signaling a structural shift in customer purchasing behavior that may warrant reallocation of marketing spend and inventory planning toward online channels. Taken together, the dashboard suggests that future performance risk is less about revenue collapse and more about cashflow quality, return exposure, and forecast uncertainty, meaning management decisions should prioritize tightening return controls, stress-testing liquidity against downside revenue scenarios, and aligning operational planning with the more resilient online sales channel rather than relying on headline revenue growth alone.
+
+Recommendations
+
+- Plan cash using the lower revenue scenario, not the average forecast
+    
+    The forecast shows that revenue uncertainty is widening over time. To avoid liquidity pressure, cash planning should be anchored to the lower bound rather than the point forecast. This ensures the business can still meet landlord payments, refunds, and operating costs even if demand underperforms expectations. Also, the presence of wide forecast bounds should trigger scenario planning rather than be hidden or ignored. Management should use the forecast range to stress-test staffing, inventory, and cash commitments under both optimistic and downside scenarios.
+    
+- Actively reduce return rates before scaling revenue expectations
+    
+    The return rate forecast is trending above historical levels in some future periods, which means headline revenue growth may not translate into real cash. The business should tighten return policies, improve product descriptions, and review high-return categories to prevent future revenue leakage.
+    
+- Shift more resources toward the online channel
+
+Marketing spend, promotions, and inventory allocation should increasingly favor online sales, while in-store performance should be monitored for cost efficiency rather than growth.
+
+- Do not rely on order volume growth alone to drive performance
+
+Forecasted order volumes fluctuate and do not show strong, sustained growth. This suggests that pushing for more orders without improving order quality may increase operational load without improving profitability. Focus should instead be placed on improving conversion quality and reducing post-purchase losses.
+
+Conclusion
+
+The KPI dashboards provides a consolidated view of business performance across revenue, orders, customer activity, and returns. With the forecast dashboard extending historical performance into forward-looking insights by quantifying expected trends and uncertainty across revenue, order volume, return rates, and sales channels. Overall, the dashboard establishes a strong baseline for monitoring operational efficiency and identifying areas where revenue quality, not just volume, needs improvement.
