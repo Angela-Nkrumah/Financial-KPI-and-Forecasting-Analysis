@@ -67,6 +67,7 @@ Two main dashboards were designed with with a business-first perspective ensurin
 
 Financial KPI Dashboard
 <img width="1919" height="1199" alt="Dashboard 1" src="https://github.com/user-attachments/assets/b31cd47a-b4d4-4193-b267-466607ad3cf6" />
+For interactive feature of dashboard: https://public.tableau.com/app/profile/angela.nkrumah/viz/FinancialKPIDashboard_17660155621250/Dashboard1?publish=yes
 
 At a glance, the top section of the dashboard has five (5) cards visualizing the KPIs of the business and one (1) supporting chart which provides context into the revenue trend of the dataset, allowing decision-makers to move from high-level KPIs to deeper trend and category insights.
 Key Performance Indicator’s
@@ -140,6 +141,7 @@ The KPI analysis reveals that revenue performance is healthy with a total revenu
 This dashboard presents a forward-looking view of key business performance indicators using Seasonal Autoregressive Integrated Moving Average (SARIMA) due to the trends and repeating seasonal patterns in the dataset. Each visualization is designed to support planning, monitoring, and decision-making over a 12‑month horizon.
 
 <img width="1919" height="1199" alt="Dashboard 1(1)" src="https://github.com/user-attachments/assets/68c77ed6-c677-4f93-92b2-c75430ce5994" />
+For interactive features of the dashboard: https://public.tableau.com/app/profile/angela.nkrumah/viz/FinancialKPIforecastdashboard/Dashboard1?publish=yes
 
 # Charts
 
