@@ -1,8 +1,8 @@
-Executive Summary
+## Executive Summary
 
 This project seeks to solve a common challenge most business struggle with, which is having a unified, forward-looking view of their financial performance. I developed a financial KPI Dashboard that brings together revenue, profit, order value, and returns into one clear interface for an e-commerce business. Beyond reporting the past, it integrates forecasting to anticipate future revenue and risks. This enables executives to act faster, optimize strategy, and strengthen financial decision-making
 
-Business Objective
+# Business Objective
 
 The e-commerce business faces challenges when it comes to financial reporting which often affects the efficacy in the decision making of the business. With financial data often scattered across multiple systems and reports, visibility across key performance areas were often overlooked by executives. Another limitation is the focus on historical reporting without forward-looking analysis. This lack of forecasting made it difficult for the business to plan effectively by allocating funds or anticipating risks.
 
@@ -13,11 +13,11 @@ The objective of this project was to address these issues by designing a single 
 - Introduce forecasting capabilities to move from descriptive to predictive analytics, supporting more proactive planning.
 - Support strategic growth by giving leadership the tools to identify trends early and respond with data-driven strategies.
 
-Data Overview
+# Data Overview
 
 This project uses a sales dataset of an e-commerce business that captures a wide range of financial and operational details from customer transactions.
 
-Key Columns In Dataset
+# Key Columns In Dataset
 
 - Invoice No – A unique identifier for each sales transaction.
 - Stock Code – The SKU or product code for tracking inventory.
@@ -37,7 +37,13 @@ Key Columns In Dataset
 - Warehouse Location – The warehouse from which the order was shipped.
 - Order Priority – The urgency of the order (High, Medium, Low).
 
-Data Cleaning and Preparation
+# Tools Used
+- Tableau Public
+- Time series forecasting (SARIMA)
+- Calculated fields and table calculations
+- Custom dashboard layout and design
+
+# Data Cleaning and Preparation
 
 To ensure accuracy and consistency, the dataset was cleaned before analysis by
 
@@ -55,7 +61,7 @@ To ensure accuracy and consistency, the dataset was cleaned before analysis by
 - Converted data types such as dates into proper formats for time-series forecasting.
 - Removed inconsistencies such as extra spaces or irregular formatting in product descriptions.
 
-Dashboard 
+# Dashboard 
 
 Two main dashboards were designed with with a business-first perspective ensuring that each visual, not only told a story from a business point of view, but also to answer a key operational or financial question.
 
@@ -91,11 +97,11 @@ Key Performance Indicator’s
     A line chart that displays revenue trends by year and month of both in-store purchase and online purchase aiding the businesses identify seasonality, growth patterns, and revenue dips that may need corrective actions.
     
 
-Business Insights of Dashboard
+# Business Insights of Dashboard
 
 The KPI analysis reveals that revenue performance is healthy with a total revenue of $ 60,128,85.82, but uneven across time. Average Order Value (AOV) shows consistent sales activity but remains relatively modest, indicating untapped potential in maximizing order size. The return rate of 4.7%, though not alarmingly high overall, highlights specific categories with above-average levels, which directly impact profitability and signal potential issues in product quality, customer expectations, or logistics. Supporting visual reinforce these findings with the revenue trend emphasizes seasonality and growth potential including; noticeable peaks specifically during; January 2021, January 2022, October 2022, March 2025 for both in-store and online. Although there has been some dips during the period of February  2022, September 2022, April 2023, February 2024, February 2025, June 2025 and the highest decline being in September 2025(which is understanding, since, the month and year of September 2025 just begun).Together, these insights underline both strengths in demand and weaknesses in efficiency.
 
-Recommendations
+# Recommendations
 
 - Boost Average Order Value (AOV):
     
@@ -128,11 +134,11 @@ Recommendations
     Continuously review pricing strategies to protect margins from returns and discounts.
     
 
-KPI Forecast Dashboard.
+# KPI Forecast Dashboard.
 
 This dashboard presents a forward-looking view of key business performance indicators using Seasonal Autoregressive Integrated Moving Average (SARIMA) due to the trends and repeating seasonal patterns in the dataset. Each visualization is designed to support planning, monitoring, and decision-making over a 12‑month horizon.
 
-Charts
+# Charts
 
 - Revenue Forecast(12 months outlook with SARIMA uncertainty).
 
@@ -154,7 +160,7 @@ Business Insight of Dashboard.
 
 The combined forecasting and KPI analysis indicates that while projected revenue remains positive across the forecast horizon, the widening gap between upper and lower revenue bounds highlights increasing uncertainty driven by volatility in order volume and return behavior rather than price effects. Forecasted order volume shows uneven growth, suggesting demand is not consistently scaling month-over-month, which introduces pressure on cash predictability despite stable average order values. At the same time, the return rate forecast trends above historical averages in several future periods, implying that a growing share of gross revenue may not convert into net realizable cash, particularly if return management processes remain unchanged. Channel-level forecasts further reveal that online revenue is expected to outperform in-store revenue in both level and growth consistency, signaling a structural shift in customer purchasing behavior that may warrant reallocation of marketing spend and inventory planning toward online channels. Taken together, the dashboard suggests that future performance risk is less about revenue collapse and more about cashflow quality, return exposure, and forecast uncertainty, meaning management decisions should prioritize tightening return controls, stress-testing liquidity against downside revenue scenarios, and aligning operational planning with the more resilient online sales channel rather than relying on headline revenue growth alone.
 
-Recommendations
+# Recommendations
 
 - Plan cash using the lower revenue scenario, not the average forecast.
     
@@ -172,6 +178,6 @@ Marketing spend, promotions, and inventory allocation should increasingly favor 
 
 Forecasted order volumes fluctuate and do not show strong, sustained growth. This suggests that pushing for more orders without improving order quality may increase operational load without improving profitability. Focus should instead be placed on improving conversion quality and reducing post-purchase losses.
 
-Conclusion
+# Conclusion
 
 The KPI dashboards provides a consolidated view of business performance across revenue, orders, customer activity, and returns. With the forecast dashboard extending historical performance into forward-looking insights by quantifying expected trends and uncertainty across revenue, order volume, return rates, and sales channels. Overall, the dashboard establishes a strong baseline for monitoring operational efficiency and identifying areas where revenue quality, not just volume, needs improvement.
