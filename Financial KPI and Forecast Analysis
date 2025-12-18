@@ -128,47 +128,47 @@ Recommendations
     Continuously review pricing strategies to protect margins from returns and discounts.
     
 
-KPI Forecast Dashboard
+KPI Forecast Dashboard.
 
 This dashboard presents a forward-looking view of key business performance indicators using Seasonal Autoregressive Integrated Moving Average (SARIMA) due to the trends and repeating seasonal patterns in the dataset. Each visualization is designed to support planning, monitoring, and decision-making over a 12‑month horizon.
 
 Charts
 
-- Revenue Forecast(12 months outlook with SARIMA uncertainty)
+- Revenue Forecast(12 months outlook with SARIMA uncertainty).
 
 This chart displays the projected monthly revenue for the next 12 months using a SARIMA-based time series model. The solid line represents the point forecast, while the upper and lower dashed lines indicate the forecast uncertainty bounds. These bounds reflect potential variability in future revenue due to historical volatility and model uncertainty, providing a realistic range rather than a single deterministic outcome.
 
-- Order Volume Forecast(Expected monthly demand)
+- Order Volume Forecast(Expected monthly demand).
 
 This visualization shows the expected number of orders per month over the forecast period. It presents a point forecast only, without confidence intervals, to emphasize the central expectation of demand. The chart helps stakeholders anticipate operational load, inventory needs, and capacity planning based on projected order activity
 
-- In-Store and Online revenue forecast(Next 12 months)
+- In-Store and Online revenue forecast(Next 12 months).
 
 This dual-line chart compares forecasted revenue from in‑store and online sales channels over the next year. By separating the two channels on a shared time axis, the chart highlights differences in performance trends, seasonality, and relative contribution to total revenue. It supports channel-level strategy and resource allocation decisions.
 
-- Overall forecast return rate (Next 12 months)
+- Overall forecast return rate (Next 12 months).
 
 This chart illustrates the projected return rate over time, showing how product returns are expected to evolve in the coming months. A historical average return rate is included as a reference line to provide context for evaluating whether forecasted return levels are above or below normal performance. This transforms the chart from a simple trend view into a decision-support tool for risk management and operational planning.
 
-Business Insight of Dashboard
+Business Insight of Dashboard.
 
 The combined forecasting and KPI analysis indicates that while projected revenue remains positive across the forecast horizon, the widening gap between upper and lower revenue bounds highlights increasing uncertainty driven by volatility in order volume and return behavior rather than price effects. Forecasted order volume shows uneven growth, suggesting demand is not consistently scaling month-over-month, which introduces pressure on cash predictability despite stable average order values. At the same time, the return rate forecast trends above historical averages in several future periods, implying that a growing share of gross revenue may not convert into net realizable cash, particularly if return management processes remain unchanged. Channel-level forecasts further reveal that online revenue is expected to outperform in-store revenue in both level and growth consistency, signaling a structural shift in customer purchasing behavior that may warrant reallocation of marketing spend and inventory planning toward online channels. Taken together, the dashboard suggests that future performance risk is less about revenue collapse and more about cashflow quality, return exposure, and forecast uncertainty, meaning management decisions should prioritize tightening return controls, stress-testing liquidity against downside revenue scenarios, and aligning operational planning with the more resilient online sales channel rather than relying on headline revenue growth alone.
 
 Recommendations
 
-- Plan cash using the lower revenue scenario, not the average forecast
+- Plan cash using the lower revenue scenario, not the average forecast.
     
     The forecast shows that revenue uncertainty is widening over time. To avoid liquidity pressure, cash planning should be anchored to the lower bound rather than the point forecast. This ensures the business can still meet landlord payments, refunds, and operating costs even if demand underperforms expectations. Also, the presence of wide forecast bounds should trigger scenario planning rather than be hidden or ignored. Management should use the forecast range to stress-test staffing, inventory, and cash commitments under both optimistic and downside scenarios.
     
-- Actively reduce return rates before scaling revenue expectations
+- Actively reduce return rates before scaling revenue expectations.
     
     The return rate forecast is trending above historical levels in some future periods, which means headline revenue growth may not translate into real cash. The business should tighten return policies, improve product descriptions, and review high-return categories to prevent future revenue leakage.
     
-- Shift more resources toward the online channel
+- Shift more resources toward the online channel.
 
 Marketing spend, promotions, and inventory allocation should increasingly favor online sales, while in-store performance should be monitored for cost efficiency rather than growth.
 
-- Do not rely on order volume growth alone to drive performance
+- Do not rely on order volume growth alone to drive performance.
 
 Forecasted order volumes fluctuate and do not show strong, sustained growth. This suggests that pushing for more orders without improving order quality may increase operational load without improving profitability. Focus should instead be placed on improving conversion quality and reducing post-purchase losses.
 
