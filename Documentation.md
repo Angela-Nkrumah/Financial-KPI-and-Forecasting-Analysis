@@ -66,6 +66,7 @@ To ensure accuracy and consistency, the dataset was cleaned before analysis by
 Two main dashboards were designed with with a business-first perspective ensuring that each visual, not only told a story from a business point of view, but also to answer a key operational or financial question.
 
 Financial KPI Dashboard
+<img width="1919" height="1199" alt="Dashboard 1" src="https://github.com/user-attachments/assets/b31cd47a-b4d4-4193-b267-466607ad3cf6" />
 
 At a glance, the top section of the dashboard has five (5) cards visualizing the KPIs of the business and one (1) supporting chart which provides context into the revenue trend of the dataset, allowing decision-makers to move from high-level KPIs to deeper trend and category insights.
 Key Performance Indicator’s
