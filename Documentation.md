@@ -1,6 +1,6 @@
 ## Executive Summary
 
-This project seeks to solve a common challenge most business struggle with, which is having a unified, forward-looking view of their financial performance. I developed a financial KPI Dashboard that brings together revenue, profit, order value, and returns into one clear interface for an e-commerce business. Beyond reporting the past, it integrates forecasting to anticipate future revenue and risks. This enables executives to act faster, optimize strategy, and strengthen financial decision-making
+This project seeks to solve a common challenge most business struggle with, which is having a unified, forward-looking view of their financial performance. I developed a financial KPI Dashboard that brings together revenue, profit, order value, and returns into one clear interface for an e-commerce business. Beyond reporting the past, it integrates forecasting using Seasonal Autoregressive Integrated Moving Average(SARIMA) to anticipate future revenue and risks. This enables executives to act faster, optimize strategy, and strengthen financial decision-making
 
 # Business Objective
 
@@ -66,7 +66,7 @@ To ensure accuracy and consistency, the dataset was cleaned before analysis by
 Two main dashboards were designed with with a business-first perspective ensuring that each visual, not only told a story from a business point of view, but also to answer a key operational or financial question.
 
 Financial KPI Dashboard
-<img width="1919" height="1199" alt="Dashboard 1" src="https://github.com/user-attachments/assets/b31cd47a-b4d4-4193-b267-466607ad3cf6" />
+
 For interactive feature of dashboard: https://public.tableau.com/app/profile/angela.nkrumah/viz/FinancialKPIDashboard_17660155621250/Dashboard1?publish=yes
 
 At a glance, the top section of the dashboard has five (5) cards visualizing the KPIs of the business and one (1) supporting chart which provides context into the revenue trend of the dataset, allowing decision-makers to move from high-level KPIs to deeper trend and category insights.
@@ -101,7 +101,7 @@ Key Performance Indicator’s
 
 # Business Insights of Dashboard
 
-The KPI analysis reveals that revenue performance is healthy with a total revenue of $ 60,128,85.82, but uneven across time. Average Order Value (AOV) shows consistent sales activity but remains relatively modest, indicating untapped potential in maximizing order size. The return rate of 4.7%, though not alarmingly high overall, highlights specific categories with above-average levels, which directly impact profitability and signal potential issues in product quality, customer expectations, or logistics. Supporting visual reinforce these findings with the revenue trend emphasizes seasonality and growth potential including; noticeable peaks specifically during; January 2021, January 2022, October 2022, March 2025 for both in-store and online. Although there has been some dips during the period of February  2022, September 2022, April 2023, February 2024, February 2025, June 2025 and the highest decline being in September 2025(which is understanding, since, the month and year of September 2025 just begun).Together, these insights underline both strengths in demand and weaknesses in efficiency.
+The KPI analysis reveals that revenue performance is healthy with a total revenue of $ 60,128,85.82, but uneven across time. Average Order Value (AOV) shows consistent sales activity but remains relatively modest, indicating untapped potential in maximizing order size. The return rate of 4.7%, though not alarmingly high overall, highlights specific categories with above-average levels, which directly impact profitability and signal potential issues in product quality, customer expectations, or logistics. Supporting visual reinforce these findings with the revenue trend emphasizes seasonality and growth potential including; noticeable peaks specifically during; January 2021, January 2022, October 2022, March 2025 for both in-store and online. Although there has been some dips during the period of February  2022, September 2022, April 2023, February 2024, February 2025, June 2025 and the highest decline being in September 2025(which is understanding, since, the month and year of September 2025 just begun).Revenue remained relatively stable between $10-11M annually from 2020 through 2023 but showed consistent year on year declines during that period, suggesting the business was under sustained pressure. Whether from market competition, changing consumer behaviour, or operational challenges.2024 marked a turning point. Revenue grew by approximately 2.1% year on year,the only year in the dataset to show positive growth. This recovery, while modest, signals that whatever pressures the business faced through 2021-2023 may have begun to stabilise.Together, these insights underline both strengths in demand and weaknesses in efficiency.
 
 # Recommendations
 
