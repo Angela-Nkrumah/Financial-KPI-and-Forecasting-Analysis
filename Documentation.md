@@ -66,6 +66,7 @@ To ensure accuracy and consistency, the dataset was cleaned before analysis by
 Two main dashboards were designed with with a business-first perspective ensuring that each visual, not only told a story from a business point of view, but also to answer a key operational or financial question.
 
 Financial KPI Dashboard
+
 <img width="1919" height="1199" alt="kpi_dashboard" src="https://github.com/user-attachments/assets/970ab61e-b411-4405-b3c4-a70c2b9ea952" />
 
 For interactive feature of dashboard: https://public.tableau.com/app/profile/angela.nkrumah/viz/FinancialKPIDashboard_17660155621250/Dashboard1?publish=yes
